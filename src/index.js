@@ -51,6 +51,7 @@ function isDup(UserNum) {
     }
     return Isdup;
 }
+//?
 function isSame(UserNum, i, j, Isdup) {
     if (UserNum[i] == UserNum[j]) {
         return true;
