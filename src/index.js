@@ -1,6 +1,6 @@
-//컴퓨터 값뽑기
+//컴퓨터 값뽑기 모델?
 function pickRandomThreeNum() {
-    const ComNum = new Array();
+    let ComNum = new Array();
     
     let i = 0;
     while (i < 3) {
@@ -25,7 +25,7 @@ function isOverlap(ComNum, temp) {
     return Overlap;
 }
 //컴퓨터 값 뽑기 끝
-//유저 값 받기
+//유저 값 받기 모델?
 function getUserNum() {
     let UserNum = Array.from(document.getElementById("user-input").value);
     if (UserNum.length == 0) {
@@ -61,7 +61,7 @@ function isSame(UserNum, i, j, Isdup) {
 }
 //유저값받기 끝
 
-//판단하기
+//판단하기 컨트롤?
 
 function play() {
     const UserNum = getUserNum();
@@ -91,7 +91,8 @@ function isStrike(ComNum, UserNum, i, j){
     return CountStrike;
 }
 //판단끝
-//프린트하기
+
+//프린트하기 뷰?
 function whatIsResult(CountBall,CountStrike){
     let text;
     let isAnswer=false;
@@ -121,9 +122,10 @@ function printResult(text,isAnswer){
 }
 
 //프린트하기끝
-
+//다시 시작하기
 function Restart(){
     
 }
 const ComNum = pickRandomThreeNum();
 document.getElementById("submit").onclick = play;
+document.getElementById("game-restart-button").onclick=Restart
