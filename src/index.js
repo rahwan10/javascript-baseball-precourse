@@ -124,11 +124,11 @@ function printResult(text,isAnswer){
 //프린트하기끝
 //다시 시작하기
 function Restart(){
-    pickRandomThreeNum();
+    ComNum=pickRandomThreeNum();
     document.getElementById('game-restart-button').style.display='none';
     document.getElementById("result").innerText=' ';
 
 }
-const ComNum = pickRandomThreeNum();
+let ComNum = pickRandomThreeNum();
 document.getElementById("submit").onclick = play;
 document.getElementById("game-restart-button").onclick=Restart
