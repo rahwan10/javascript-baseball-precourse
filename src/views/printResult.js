@@ -13,7 +13,7 @@ function whatIsResult(CountBall,CountStrike){
     }else if(CountBall==0){
         text=CountStrike+"스트라이크";
     }else{
-        text=CountBall+"볼"+CountStrike+"스트라이크";
+        text=CountBall+"볼 "+CountStrike+"스트라이크";
     }
     printResult(text,isAnswer);
     

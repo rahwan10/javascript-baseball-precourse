@@ -11,7 +11,7 @@ function pickRandomThreeNum() {
             i++;
         }
     }
-    alert(ComNum);
+    //alert(ComNum);
 
     return ComNum;
 
