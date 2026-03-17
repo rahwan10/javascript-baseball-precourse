@@ -124,7 +124,9 @@ function printResult(text,isAnswer){
 //프린트하기끝
 //다시 시작하기
 function Restart(){
-    
+    pickRandomThreeNum();
+    document.getElementById('game-restart-button').style.display='none';
+
 }
 const ComNum = pickRandomThreeNum();
 document.getElementById("submit").onclick = play;
