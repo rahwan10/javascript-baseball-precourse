@@ -126,6 +126,7 @@ function printResult(text,isAnswer){
 function Restart(){
     pickRandomThreeNum();
     document.getElementById('game-restart-button').style.display='none';
+    document.getElementById("result").innerText=' ';
 
 }
 const ComNum = pickRandomThreeNum();
