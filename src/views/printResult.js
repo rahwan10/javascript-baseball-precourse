@@ -23,6 +23,8 @@ function printResult(text,isAnswer){
     element.innerText=text;
     if(isAnswer){
         document.getElementById('game-restart-button').style.display='block';
+        document.getElementById("user-input").disabled= true;
+        alert("!");
     }else{
         document.getElementById('game-restart-button').style.display='none';
     }

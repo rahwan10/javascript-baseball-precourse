@@ -9,6 +9,7 @@ function Restart(){
     ComNum=pickRandomThreeNum();
     document.getElementById('game-restart-button').style.display='none';
     document.getElementById("result").innerText=' ';
+    document.getElementById("user-input").disabled= false;
 }
 
 function play() {
