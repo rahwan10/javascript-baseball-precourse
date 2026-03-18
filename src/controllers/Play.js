@@ -4,6 +4,13 @@ import pickRandomThreeNum from '../models/PickThreeNum.js';
 export default play
 
 let ComNum = pickRandomThreeNum();
+
+function Restart(){
+    ComNum=pickRandomThreeNum();
+    document.getElementById('game-restart-button').style.display='none';
+    document.getElementById("result").innerText=' ';
+}
+
 function play() {
     const UserNum = getUserNum();
     if (!UserNum) return;
@@ -31,3 +38,6 @@ function isStrike(ComNum, UserNum, i, j){
     }
     return CountStrike;
 }
+
+document.getElementById("submit").onclick = play;
+document.getElementById("game-restart-button").onclick=Restart
