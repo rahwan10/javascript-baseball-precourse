@@ -1,7 +1,6 @@
 export default pickRandomThreeNum
-
+let ComNum = new Array();
 function pickRandomThreeNum() {
-    let ComNum = new Array();
     
     let i = 0;
     while (i < 3) {
@@ -11,10 +10,8 @@ function pickRandomThreeNum() {
             i++;
         }
     }
-    //alert(ComNum);
-
+    alert(ComNum);
     return ComNum;
-
 }
 function isOverlap(ComNum, temp) {
     let Overlap = false;
