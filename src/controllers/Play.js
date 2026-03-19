@@ -23,7 +23,7 @@ function play() {
             CountStrike=CountStrike+isStrike(ComNum,UserNum,i,j);
         }
     }
-    whatIsResult(CountBall,CountStrike);
+    return whatIsResult(CountBall,CountStrike);
 }
 function isBall(ComNum, UserNum, i, j) {
     let CountBall=0;

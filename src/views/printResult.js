@@ -16,6 +16,7 @@ function whatIsResult(CountBall,CountStrike){
         text=CountBall+"볼 "+CountStrike+"스트라이크";
     }
     printResult(text,isAnswer);
+    return text;
     
 }
 function printResult(text,isAnswer){
@@ -24,7 +25,6 @@ function printResult(text,isAnswer){
     if(isAnswer){
         document.getElementById('game-restart-button').style.display='block';
         document.getElementById("user-input").disabled= true;
-        alert("!");
     }else{
         document.getElementById('game-restart-button').style.display='none';
     }
