@@ -39,6 +39,12 @@ function isStrike(ComNum, UserNum, i, j){
     }
     return CountStrike;
 }
+function ifEnterPlay(){
+    if(event.keyCode===13){
+        play();
+    }
 
+}
+document.getElementById("user-input").onkeyup=ifEnterPlay;
 document.getElementById("submit").onclick = play;
 document.getElementById("game-restart-button").onclick=Restart
