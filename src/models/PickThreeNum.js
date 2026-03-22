@@ -1,7 +1,7 @@
 export default pickRandomThreeNum
-let ComNum = new Array();
+
 function pickRandomThreeNum() {
-    
+    let ComNum = new Array();
     let i = 0;
     while (i < 3) {
         let temp = MissionUtils.Random.pickNumberInRange(1, 9);
@@ -10,7 +10,7 @@ function pickRandomThreeNum() {
             i++;
         }
     }
-    alert(ComNum);
+    console.log(ComNum);
     return ComNum;
 }
 function isOverlap(ComNum, temp) {
