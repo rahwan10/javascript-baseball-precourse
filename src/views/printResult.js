@@ -25,6 +25,7 @@ function printResult(text,isAnswer){
     if(isAnswer){
         document.getElementById('game-restart-button').style.display='block';
         document.getElementById("user-input").disabled= true;
+        document.getElementById("submit").disabled=true;
     }else{
         document.getElementById('game-restart-button').style.display='none';
     }

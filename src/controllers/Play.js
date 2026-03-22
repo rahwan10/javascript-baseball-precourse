@@ -10,6 +10,7 @@ function Restart(){
     document.getElementById('game-restart-button').style.display='none';
     document.getElementById("result").innerText=' ';
     document.getElementById("user-input").disabled= false;
+    document.getElementById("submit").disabled=false;
 }
 
 function play() {
