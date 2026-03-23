@@ -9,6 +9,10 @@ function getUserNum() {
         alert("숫자 3개를 붙여 적어주세요!");
         return null;
     }
+    if(isNotNum(UserNum)){
+        alert("숫자를 입력해주세요!(문자,기호는 안됩니다)");
+        return null;
+    }
     if (isDup(UserNum)) {
         alert("중복되지않는 숫자를 입력해주세요!");
         return null;
@@ -17,10 +21,7 @@ function getUserNum() {
         alert("1~9까지의 숫자를 입력해주세요!");
         return null;
     }
-    if(isNotNum(UserNum)){
-        alert("숫자를 입력해주세요!");
-        return null;
-    }
+    
 
     return UserNum;
 }
@@ -43,7 +44,7 @@ function isSame(UserNum, i, j, Isdup) {
 }
 function isNotNum(UserNum){
     let isNotNum=false
-    for(let i=0;i<3;i++){
+    for(let i=0;i<UserNum.length;i++){
         if(isNaN(UserNum[i])){
             isNotNum=true;
         }
