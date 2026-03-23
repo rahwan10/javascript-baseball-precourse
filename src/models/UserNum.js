@@ -3,7 +3,7 @@ export default getUserNum
 function getUserNum() {
     let UserNum = Array.from(document.getElementById("user-input").value);
     if(isNotNum(UserNum)){
-        alert("숫자를 입력해주세요!(문자,기호는 안됩니다)");
+        alert("숫자를 입력해주세요!(문자,기호,공백은 안됩니다)");
         return null;
     }
     if (UserNum.length === 0) {
@@ -37,7 +37,7 @@ function isDup(UserNum) {
 }
 //?
 function isSame(UserNum, i, j, Isdup) {
-    if (UserNum[i] == UserNum[j]) {
+    if (UserNum[i] === UserNum[j]) {
         return true;
     } else {
         return Isdup
@@ -46,7 +46,7 @@ function isSame(UserNum, i, j, Isdup) {
 function isNotNum(UserNum){
     let isNotNum=false
     for(let i=0;i<UserNum.length;i++){
-        if(isNaN(UserNum[i])){
+        if(isNaN(UserNum[i])||UserNum[i]===" "){
             isNotNum=true;
         }
     }
@@ -55,7 +55,7 @@ function isNotNum(UserNum){
 function isZero(UserNum){
     let isZero=false;
     for(let i=0;i<3;i++){
-        if(UserNum[i]==0){
+        if(UserNum[i]===0){
             isZero=true;
         }
     }
