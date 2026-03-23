@@ -11,6 +11,7 @@ function Restart(){
     document.getElementById("result").innerText=' ';
     document.getElementById("user-input").disabled= false;
     document.getElementById("submit").disabled=false;
+    document.getElementById("user-input").value="";
 }
 
 function play() {
