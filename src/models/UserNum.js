@@ -2,6 +2,10 @@ export default getUserNum
 
 function getUserNum() {
     let UserNum = Array.from(document.getElementById("user-input").value);
+    if(isNotNum(UserNum)){
+        alert("숫자를 입력해주세요!(문자,기호는 안됩니다)");
+        return null;
+    }
     if (UserNum.length === 0) {
         alert("숫자를 적어주세요");
         return null;
@@ -9,10 +13,7 @@ function getUserNum() {
         alert("숫자 3개를 붙여 적어주세요!");
         return null;
     }
-    if(isNotNum(UserNum)){
-        alert("숫자를 입력해주세요!(문자,기호는 안됩니다)");
-        return null;
-    }
+    
     if (isDup(UserNum)) {
         alert("중복되지않는 숫자를 입력해주세요!");
         return null;
